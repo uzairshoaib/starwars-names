@@ -1,14 +1,16 @@
 {
   "name": "starwars-names",
-  "version": "1.2.0-beta.0",
+  "version": "0.0.0-development",
   "description": "Get randon Star Wars names",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uzairshoaib/starwars-names.git"
+    "url": "https://github.com/uzairshoaib/starwars-names.git"
   },
   "keywords": [
     "random",
@@ -23,5 +25,15 @@
   "homepage": "https://github.com/uzairshoaib/starwars-names#readme",
   "dependencies": {
     "unique-random-array": "2.0.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.0.2",
+    "mocha": "6.2.2",
+    "semantic-release": "^15.13.30"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
